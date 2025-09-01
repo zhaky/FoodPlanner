@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 class="title">Dashboard</h1>
+
+    <!-- 
+    Add recipe to list
+    Add weight to recipe
+    Add duraction to recipe
+    Pick random recipe
+    Edit/remove recipe
+    -->
+
+    <main>
+        
+        <div class="frame level1">
+            <h2 class="title">FoodPlan</h2>
+            <table>
+                <tr>
+                    <th>Recipe</th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <td>Spaghetti</td>
+                    <td>01-01-2025</td>
+                </tr>
+                <tr>
+                    <td>Soup</td>
+                    <td>04-01-2025</td>
+                </tr>
+                <tr>
+                    <td>Hotdogs</td>
+                    <td>06-01-2025</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="frame level1">
+            <h2 class="title">Expiration</h2>
+            <table>
+                <tr>
+                    <th>Ingredient</th>
+                    <th>Expires in</th>
+                </tr>
+                <tr>
+                    <td>Milk</td>
+                    <td>0 days</td>
+                </tr>
+                <tr>
+                    <td>Coffee</td>
+                    <td>1 day</td>
+                </tr>
+                <tr>
+                    <td>Mustart</td>
+                    <td>3 days</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="frame level1">
+            <h2 class="title">Low stock</h2>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td>Flour</td>
+                    <td>300g</td>
+                </tr>
+                <tr>
+                    <td>Spaghetti</td>
+                    <td>30%</td>
+                </tr>
+                <tr>
+                    <td>Oil</td>
+                    <td>300ml</td>
+                </tr>
+            </table>
+        </div>
+        
+    </main>
+
+    <footer class="level2">
+
+        <button class="button button-menu button-active" id="button-menu_dashboard">Dash</button>
+        <button class="button button-menu" id="button-menu_plan">Plan</button>
+        <button class="button button-menu" id="button-menu_recipes">Reci</button>
+        <button class="button button-menu" id="button-menu_storage">Stor</button>
+
+    </footer>
+
+    <script src="script.js"></script>
+        
+</body>
+
+</html>

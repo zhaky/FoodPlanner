@@ -1,0 +1,119 @@
+:root {
+    --bgColor: #262730; /*HSB: 210, 5, 5 */
+    --firstBoxColor: #303233; /*HSB: 210, 5, 20 */
+    --secondBoxColor: #494B4D; /*HSB: 210, 5, 30 */
+    --thirdBoxColor: #616366;/*HSB: 210, 5, 40 */
+    --negativeColor: #BF7373; /*HSB: , 40, 75 */
+    --positiveColor: #73BF99; /*HSB: 150, 40, 75 */
+    --neutralColor: #7399BF; /*HSB: 210, 40, 75 */
+    --textColor: #EDF0F2; /*HSB: 210, 5, 95 */
+    --titleColor: #F2F9FF; /*HSB: 210, 5, 100 */
+    --maxWidth: 700px;
+    --minWidth: 340px;
+}
+
+/* CONTAINERS */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: var(--bgColor);
+    color: var(--textColor);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+main {
+    display: flex wrap;
+    flex-flow: column;
+    overflow-y: auto;
+    padding-bottom: 5rem;
+    border-radius: .5rem;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: var(--maxWidth);
+    min-width: var(--minWidth);
+    height: min-content;
+    position: fixed;
+    bottom: 0;
+    border-radius: .5rem .5rem 0rem 0rem;
+}
+
+.frame {
+    border-radius: .5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: var(--maxWidth);
+    min-width: var(--minWidth);
+}
+
+.level1 {
+    background-color: var(--firstBoxColor);
+}
+
+.level2 {
+    background-color: var(--secondBoxColor);
+}
+
+.level3 {
+    background-color: var(--thirdBoxColor);
+}
+
+table {
+    width: 100%;
+    justify-content: left;
+    align-items: left;
+}
+
+th, td {
+    text-align: left;
+    width: 50%;
+}
+
+/* TEXT */
+
+.title {
+    align-content: center;
+    color: var(--titleColor);
+    text-align: center;
+}
+
+/* BUTTONS */
+
+button {
+    width: min(3rem);
+    height: min(3rem);
+    color: var(--textColor);
+    background-color: var(--neutralColor);
+    padding: .5rem;
+    margin: .5rem;
+    border-style: none;
+    border-radius: .5rem;
+}
+
+.button-active {
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--textColor);
+}
