@@ -33,7 +33,7 @@ main {
     display: flex wrap;
     flex-flow: column;
     overflow-y: auto;
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
     border-radius: .5rem;
     width: 100%;
 }
@@ -101,7 +101,7 @@ table {
 
 th, td {
     text-align: left;
-    width: 50%;
+    width: 3fr;
 }
 
 tr:nth-child(even) {
