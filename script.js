@@ -13,3 +13,7 @@ document.getElementById("button-menu_recipes").onclick = function() {
 document.getElementById("button-menu_storage").onclick = function() {
     window.location.href = "storage.htm";
 }
+
+document.getElementById("button-menu_settings").onclick = function() {
+    window.location.href = "settings.htm";
+}

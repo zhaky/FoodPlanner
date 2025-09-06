@@ -125,6 +125,7 @@ tr:hover {
 button {
     width: min(3rem);
     height: min(3rem);
+    font-weight: 600;
     color: var(--textColor);
     background-color: var(--neutralColor);
     padding: .5rem;
