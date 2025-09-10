@@ -6,6 +6,8 @@
     --negativeColor: #BF7373; /*HSB: , 40, 75 */
     --positiveColor: #73BF99; /*HSB: 150, 40, 75 */
     --neutralColor: #7399BF; /*HSB: 210, 40, 75 */
+    --darkNeutralColor: #4A6A8C; /*HSB: 210, 40, 55 */
+    --greyedOutColor: #B2B2B2; /*HSB: 0, 0, 30 */
     --textColor: #EDF0F2; /*HSB: 210, 5, 95 */
     --titleColor: #F2F9FF; /*HSB: 210, 5, 100 */
     --maxWidth: 700px;
@@ -122,20 +124,28 @@ tr:hover {
 
 /* BUTTONS */
 
-button {
+.button {
+    border-style: none;
+    border-width: 3px;
     width: min(3rem);
     height: min(3rem);
     font-weight: 600;
     color: var(--textColor);
     background-color: var(--neutralColor);
-    padding: .5rem;
     margin: .5rem;
     border-style: none;
     border-radius: .5rem;
 }
 
 .button-active {
-    border-style: solid;
-    border-width: 3px;
-    border-color: var(--textColor);
+    background-color: var(--darkNeutralColor);
+}
+
+.button-inactive {
+    background-color: var(--greyedOutColor);
+}
+
+.button-icon {
+    width: 3rem;
+    height: 3rem;
 }
