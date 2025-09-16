@@ -114,7 +114,7 @@ function openToolMenu() {
             buttons = [
                 { icon: "Icons/config.png" },
                 { icon: "Icons/account.png" },
-                { icon: "Icons/exit.png" }
+                { icon: "Icons/login.png" }
             ];
             break;
         default:
