@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     ];
     
     function getCurrentPageIndex() {
-        const currentPage = window.location.pathname.split("/").pop();
+        let currentPage = window.location.pathname.split("/").pop();
         console.log("Current page: " + currentPage);
         if (!currentPage || currentPage === "") {currentPage = "index.htm";}
         return pages.indexOf(currentPage);
