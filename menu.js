@@ -39,7 +39,6 @@ function changeActiveMenuButton(newActiveButtonId) {
     else if (currentActiveButton.id === newActiveButtonId) { // Clicked the active button
         currentActiveButton.classList.remove("button-active");
     } else { // Switch active button
-        console.log("CurrentActiveButton: ", currentActiveButton.id);
         currentActiveButton.classList.remove("button-active");
         newActiveButton.classList.add("button-active");
     }
@@ -61,7 +60,6 @@ function openToolMenu() {
     // Get name of site, so we know which tool menu to open
     let siteName = window.location.pathname.split("/").pop().toLowerCase();
     siteName = siteName.replace(".htm", "");
-    console.log("siteName: " + siteName);
 
     // Get the subMenu container
     const subMenu = document.getElementById("subMenu");

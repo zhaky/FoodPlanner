@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Initialize mobile navigation after DOM is fully loaded. This is to ensure that the body element is available.
     
     // Select the main content area (or document body)
-    const swipeArea = document.body;
+    const swipeArea = document.main;
     
     // Initialize Hammer.js
     const hammer = new Hammer(swipeArea);
