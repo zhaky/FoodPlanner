@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     function getCurrentPageIndex() {
         const currentPage = window.location.pathname.split("/").pop();
+        if (!currentPage) {currentPage = "index.htm";}
         return pages.indexOf(currentPage);
     }
     
