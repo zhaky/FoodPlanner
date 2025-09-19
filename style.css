@@ -38,6 +38,7 @@ main {
     padding-bottom: 8rem;
     border-radius: .5rem;
     width: 100%;
+    min-height: 80vh;
 }
 
 .mainMenu {

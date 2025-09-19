@@ -6,8 +6,14 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Initialize mobile navigation after DOM is fully loaded. This is to ensure that the body element is available.
     
-    // Select the main content area (or document body)
-    const swipeArea = document.querySelector("main") || document.body;
+    // If <main> exists and has content, use it as swipe area, else use document body
+    let swipeArea;
+    const main = document.querySelector("main");
+    if (main && main.innerHTML.trim().length > 0) {
+        swipeArea = main;
+    } else {
+        swipeArea = document.body;
+    }
     
     // Initialize Hammer.js
     const hammer = new Hammer(swipeArea);
