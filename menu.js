@@ -45,6 +45,23 @@ function changeActiveMenuButton(newActiveButtonId) {
 
 }
 
+function changeActiveNavigationMenuButton() {
+    // Get name of current page
+    let siteName = window.location.pathname.split("/").pop().toLowerCase();
+    siteName = siteName.replace(".htm", "");
+    const buttonID = `button-menu_${siteName}`;
+
+    // Get button responding to the current page
+    const activeButton = document.getElementById(`button-menu_${siteName}`);
+
+    // Check if the button is found, and if so set it to active
+    if (activeButton) {
+        activeButton.classList.add("button-active");
+    } else {
+        console.warn(`No navigationMenuButton found for "${siteName}"`);
+    }
+}
+
 function closeMenu() {
     const subMenu = document.getElementById("subMenu");
     if (subMenu.className) {
@@ -134,7 +151,7 @@ function openToolMenu() {
 function openNavigation() {
 
     changeActiveMenuButton("button-menu_navigation");
-
+    
     // If subMenu is already open on navigation, close it and stop, else clear it and continue.
     const subMenu = document.getElementById("subMenu");
     if (subMenu.className === "subMenu level3 navigationMenu") {
@@ -143,7 +160,7 @@ function openNavigation() {
     } else {
         closeMenu();
     }
-
+    
     subMenu.className = "subMenu level3 navigationMenu";
     
     const navigationMenuButton = [
@@ -152,7 +169,7 @@ function openNavigation() {
         { id: "button-menu_recipes", icon: "Icons/recipes.png", href: "recipes.htm" },
         { id: "button-menu_plan", icon: "Icons/plan.png", href: "plan.htm" }
     ];
-
+    
     
     // Add navigation buttons to the navigationMenu
     navigationMenuButton.forEach(navButton => {
@@ -163,6 +180,8 @@ function openNavigation() {
         button.href = navButton.href;
         subMenu.appendChild(button);
     });
+    
+    changeActiveNavigationMenuButton();
 
 }
 
