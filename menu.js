@@ -19,7 +19,7 @@ function addMainMenu() {
     // Add each button to the main menu
     menuButtons.forEach(menuButton => {
         const button = document.createElement("a");
-        button.className = `button ${menuButton.id === "button-menu_dashboard" ? "button-active" : ""}`;
+        button.className = `button ${(menuButton.id === "button-menu_dashboard" && window.location.pathname === "/index.htm" ? "button-active" : "")}`;
         button.id = menuButton.id;
         button.innerHTML = `<img class="button-icon" src="${menuButton.icon}" alt="">`;
         button.href = "#";
@@ -38,7 +38,8 @@ function changeActiveMenuButton(newActiveButtonId) {
     }
     else if (currentActiveButton.id === newActiveButtonId) { // Clicked the active button
         currentActiveButton.classList.remove("button-active");
-    } else { // Switch active button
+    } 
+    else { // Switch active button
         currentActiveButton.classList.remove("button-active");
         newActiveButton.classList.add("button-active");
     }
